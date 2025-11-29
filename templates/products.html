@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('产品展示') }}{% endblock %}
+
+{% block content %}
+<!-- Products Section -->
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">{{ _('我们的产品') }}</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 cards-grid">
+            {% for product in products %}
+            <div class="card">
+                {% if product.image_url %}
+                <div class="card-img" style="background-image: url('{{ product.image_url }}'); background-size: cover; background-position: center;"></div>
+                {% else %}
+                <div class="card-img"></div>
+                {% endif %}
+                <div class="card-content">
+                    <h3 class="card-title">{{ product.title }}</h3>
+                    <p class="card-text">{{ product.description }}</p>
+                    <div class="card-meta">
+                        <span class="price">{{ product.price }}</span>
+                        <button class="btn btn-primary">{{ _('咨询详情') }}</button>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <p style="text-align: center; width: 100%; grid-column: 1 / -1;">{{ _('暂无产品数据') }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

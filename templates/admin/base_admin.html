@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="{{ current_locale }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ _('管理后台') }}{% endblock %} - {{ company_info.name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="{{ url_for('dashboard') }}" class="text-xl font-bold text-primary">{{ company_info.name }}</a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('dashboard') }}" class="nav-item {{ 'active' if request.endpoint == 'dashboard' else '' }}">
+                    <i class="fas fa-tachometer-alt"></i> {{ _('仪表盘') }}
+                </a>
+                <a href="{{ url_for('admin_company') }}" class="nav-item {{ 'active' if request.endpoint == 'admin_company' else '' }}">
+                    <i class="fas fa-building"></i> {{ _('公司信息') }}
+                </a>
+                <a href="{{ url_for('admin_products') }}" class="nav-item {{ 'active' if request.endpoint.startswith('admin_products') else '' }}">
+                    <i class="fas fa-boxes"></i> {{ _('产品管理') }}
+                </a>
+                <a href="{{ url_for('admin_news') }}" class="nav-item {{ 'active' if request.endpoint.startswith('admin_news') else '' }}">
+                    <i class="fas fa-newspaper"></i> {{ _('新闻管理') }}
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="{{ url_for('logout') }}" class="nav-item text-danger">
+                    <i class="fas fa-sign-out-alt"></i> {{ _('退出登录') }}
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+            <main class="main-content">
+                <header class="header">
+                    <div class="flex items-center justify-between w-full">
+                        <div class="flex items-center gap-4">
+                            <span class="text-muted">{{ _('欢迎回来, 管理员') }}</span>
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">A</div>
+                        </div>
+                        <!-- 语言切换 -->
+                        <div class="language-switch">
+                            {% for code, name in languages.items() %}
+                                {% if code != current_locale %}
+                                    <a href="{{ url_for('set_language', language=code) }}" class="ml-3 text-sm hover:text-primary">{{ name }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Content -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <div class="flash-messages mb-6">
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}" style="background: rgba(239, 68, 68, 0.1); color: #f87171; padding: 0.75rem; border-radius: 0.375rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endwith %}
+                
+                {% block content %}{% endblock %}
+            </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

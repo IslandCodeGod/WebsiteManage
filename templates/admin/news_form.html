@@ -1,0 +1,55 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}{{ _('编辑新闻') if news else _('发布新闻') }}{% endblock %}
+
+{% block content %}
+<div class="dashboard-content">
+    <div class="flex justify-between items-center mb-8">
+        <div>
+            <h1 class="text-2xl font-bold">{{ _('编辑新闻') if news else _('发布新闻') }}</h1>
+            <p class="text-muted">{{ _('修改现有新闻内容') if news else _('创建并发布新的新闻') }}</p>
+        </div>
+        <a href="{{ url_for('admin_news') }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left mr-2"></i>
+            {{ _('返回列表') }}
+        </a>
+    </div>
+
+    <div class="form-container">
+        <div class="form-header">
+            <h2 class="form-title">{{ _('新闻编辑') if news else _('新闻发布') }}</h2>
+        </div>
+        <form method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">{{ _('新闻标题') }}</label>
+                    <input type="text" name="title" class="form-input" value="{{ news.title if news else '' }}" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">{{ _('封面图片 URL') }}</label>
+                    <input type="text" name="image_url" class="form-input" value="{{ news.image_url if news else '' }}"
+                        placeholder="{{ _('https://example.com/image.jpg') }}">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">{{ _('内容') }}</label>
+                    <textarea name="content" class="form-input" rows="10"
+                        required>{{ news.content if news else '' }}</textarea>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save mr-2"></i>
+                    {{ _('保存') }}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

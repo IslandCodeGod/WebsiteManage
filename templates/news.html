@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('行业动态') }}{% endblock %}
+
+{% block content %}
+<!-- News Section -->
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">{{ _('行业动态') }}</h1>
+        <div class="news-list">
+            {% for news in news_list %}
+            <div class="news-card">
+                {% if news.image_url %}
+                <div class="news-image" style="background-image: url('{{ news.image_url }}'); background-size: cover; background-position: center;"></div>
+                {% endif %}
+                <div class="news-content">
+                    <div class="news-date">{{ news.published_date.strftime('%Y-%m-%d') }}</div>
+                    <h3 class="news-title"><a href="{{ url_for('news_detail', news_id=news.id) }}">{{ news.title }}</a></h3>
+                    <p class="news-excerpt">{{ news.content[:120] }}...</p>
+                    <a href="{{ url_for('news_detail', news_id=news.id) }}" class="btn btn-outline btn-sm">{{ _('阅读更多') }}</a>
+                </div>
+            </div>
+            {% else %}
+            <p style="text-align: center; grid-column: 1 / -1;">{{ _('暂无新闻动态') }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,462 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-11-26 20:32+0800\n"
+"PO-Revision-Date: 2025-11-26 17:04+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/about.html:3 templates/base.html:20 templates/base.html:65
+msgid "关于我们"
+msgstr "关于我们"
+
+#: templates/about.html:9
+msgid "关于"
+msgstr "关于"
+
+#: templates/about.html:19
+msgid "联系我们"
+msgstr "联系我们"
+
+#: templates/about.html:22 templates/admin/company.html:41
+#: templates/base.html:73
+msgid "地址"
+msgstr "地址"
+
+#: templates/about.html:26 templates/base.html:71
+msgid "邮箱"
+msgstr "邮箱"
+
+#: templates/about.html:30 templates/base.html:72
+msgid "电话"
+msgstr "电话"
+
+#: templates/base.html:19 templates/index.html:3
+msgid "首页"
+msgstr "首页"
+
+#: templates/base.html:21 templates/products.html:3
+msgid "产品展示"
+msgstr "产品展示"
+
+#: templates/base.html:22 templates/index.html:85 templates/news.html:3
+#: templates/news.html:9
+msgid "行业动态"
+msgstr "行业动态"
+
+#: templates/admin/base_admin.html:6 templates/base.html:33
+msgid "管理后台"
+msgstr "管理后台"
+
+#: templates/base.html:64
+msgid "快速链接"
+msgstr "快速链接"
+
+#: templates/base.html:66
+msgid "产品中心"
+msgstr "产品中心"
+
+#: templates/base.html:67
+msgid "新闻动态"
+msgstr "新闻动态"
+
+#: templates/base.html:70
+msgid "联系方式"
+msgstr "联系方式"
+
+#: templates/base.html:76
+msgid "法律声明"
+msgstr "法律声明"
+
+#: templates/base.html:77
+msgid "隐私政策"
+msgstr "隐私政策"
+
+#: templates/base.html:78
+msgid "服务条款"
+msgstr "服务条款"
+
+#: templates/base.html:79
+msgid "免责声明"
+msgstr "免责声明"
+
+#: templates/base.html:83
+msgid "保留所有权利"
+msgstr "保留所有权利"
+
+#: templates/index.html:9
+msgid "构建未来的数字体验"
+msgstr "构建未来的数字体验"
+
+#: templates/index.html:10
+msgid "我们致力于为您提供最优质的企业级解决方案，助力您的业务腾飞。通过创新技术和卓越服务，让您的企业在数字时代保持竞争力。"
+msgstr "我们致力于为您提供最优质的企业级解决方案，助力您的业务腾飞。通过创新技术和卓越服务，让您的企业在数字时代保持竞争力。"
+
+#: templates/index.html:12
+msgid "探索产品"
+msgstr "探索产品"
+
+#: templates/index.html:13
+msgid "了解更多"
+msgstr "了解更多"
+
+#: templates/index.html:19
+msgid "最新产品"
+msgstr "最新产品"
+
+#: templates/index.html:33
+msgid "查看详情"
+msgstr "查看详情"
+
+#: templates/index.html:38
+msgid "暂无产品展示"
+msgstr "暂无产品展示"
+
+#: templates/index.html:45
+msgid "我们的优势"
+msgstr "我们的优势"
+
+#: templates/index.html:54
+msgid "创新技术"
+msgstr "创新技术"
+
+#: templates/index.html:55
+msgid "我们采用最先进的技术栈，确保产品的高性能和可靠性。"
+msgstr "我们采用最先进的技术栈，确保产品的高性能和可靠性。"
+
+#: templates/index.html:64
+msgid "卓越服务"
+msgstr "卓越服务"
+
+#: templates/index.html:65
+msgid "专业的客户服务团队，为您提供24/7全天候支持。"
+msgstr "专业的客户服务团队，为您提供24/7全天候支持。"
+
+#: templates/index.html:76
+msgid "客户至上"
+msgstr "客户至上"
+
+#: templates/index.html:77
+msgid "我们始终将客户需求放在首位，不断优化产品体验。"
+msgstr "我们始终将客户需求放在首位，不断优化产品体验。"
+
+#: templates/index.html:93 templates/news.html:20
+msgid "阅读更多"
+msgstr "阅读更多"
+
+#: templates/index.html:97 templates/news.html:24
+msgid "暂无新闻动态"
+msgstr "暂无新闻动态"
+
+#: templates/index.html:101
+msgid "查看全部新闻"
+msgstr "查看全部新闻"
+
+#: templates/news_detail.html:13
+msgid "发布于"
+msgstr "发布于"
+
+#: templates/admin/news_form.html:14 templates/admin/product_form.html:14
+#: templates/news_detail.html:28
+msgid "返回列表"
+msgstr "返回列表"
+
+#: templates/products.html:9
+msgid "我们的产品"
+msgstr "我们的产品"
+
+#: templates/products.html:23
+msgid "咨询详情"
+msgstr "咨询详情"
+
+#: templates/admin/products.html:54 templates/products.html:28
+msgid "暂无产品数据"
+msgstr "暂无产品数据"
+
+#: templates/admin/base_admin.html:23 templates/admin/dashboard.html:3
+#: templates/admin/dashboard.html:10
+msgid "仪表盘"
+msgstr "仪表盘"
+
+#: templates/admin/base_admin.html:26 templates/admin/company.html:16
+msgid "公司信息"
+msgstr "公司信息"
+
+#: templates/admin/base_admin.html:29 templates/admin/products.html:3
+#: templates/admin/products.html:9
+msgid "产品管理"
+msgstr "产品管理"
+
+#: templates/admin/base_admin.html:32 templates/admin/news.html:3
+#: templates/admin/news.html:9
+msgid "新闻管理"
+msgstr "新闻管理"
+
+#: templates/admin/base_admin.html:37
+msgid "退出登录"
+msgstr "退出登录"
+
+#: templates/admin/base_admin.html:47
+msgid "欢迎回来, 管理员"
+msgstr "欢迎回来, 管理员"
+
+#: templates/admin/company.html:3 templates/admin/company.html:9
+msgid "公司信息管理"
+msgstr "公司信息管理"
+
+#: templates/admin/company.html:10
+msgid "更新和管理公司的基本信息"
+msgstr "更新和管理公司的基本信息"
+
+#: templates/admin/company.html:20
+msgid "公司名称"
+msgstr "公司名称"
+
+#: templates/admin/company.html:25
+msgid "公司简介"
+msgstr "公司简介"
+
+#: templates/admin/company.html:31
+msgid "联系邮箱"
+msgstr "联系邮箱"
+
+#: templates/admin/company.html:35
+msgid "联系电话"
+msgstr "联系电话"
+
+#: templates/admin/company.html:48
+msgid "保存更改"
+msgstr "保存更改"
+
+#: templates/admin/dashboard.html:11
+msgid "欢迎回来，管理员！这里是您的管理仪表盘概览。"
+msgstr "欢迎回来，管理员！这里是您的管理仪表盘概览。"
+
+#: templates/admin/dashboard.html:19
+msgid "产品总数"
+msgstr "产品总数"
+
+#: templates/admin/dashboard.html:29
+msgid "新闻总数"
+msgstr "新闻总数"
+
+#: templates/admin/dashboard.html:39
+msgid "系统状态"
+msgstr "系统状态"
+
+#: templates/admin/dashboard.html:44
+msgid "运行正常"
+msgstr "运行正常"
+
+#: templates/admin/dashboard.html:45
+msgid "所有服务正常"
+msgstr "所有服务正常"
+
+#: templates/admin/dashboard.html:51
+msgid "快速操作"
+msgstr "快速操作"
+
+#: templates/admin/dashboard.html:59
+msgid "编辑公司信息"
+msgstr "编辑公司信息"
+
+#: templates/admin/dashboard.html:60
+msgid "更新公司基本信息、联系方式等"
+msgstr "更新公司基本信息、联系方式等"
+
+#: templates/admin/dashboard.html:70 templates/admin/product_form.html:3
+#: templates/admin/product_form.html:9
+msgid "添加产品"
+msgstr "添加产品"
+
+#: templates/admin/dashboard.html:71
+msgid "创建新产品并设置详细信息"
+msgstr "创建新产品并设置详细信息"
+
+#: templates/admin/dashboard.html:81 templates/admin/news.html:14
+#: templates/admin/news_form.html:3 templates/admin/news_form.html:9
+msgid "发布新闻"
+msgstr "发布新闻"
+
+#: templates/admin/dashboard.html:82
+msgid "创建并发布最新行业动态"
+msgstr "创建并发布最新行业动态"
+
+#: templates/admin/login.html:7
+msgid "管理员登录"
+msgstr "管理员登录"
+
+#: templates/admin/login.html:96
+msgid "管理后台登录"
+msgstr "管理后台登录"
+
+#: templates/admin/login.html:97
+msgid "请输入您的管理员账号和密码"
+msgstr "请输入您的管理员账号和密码"
+
+#: templates/admin/login.html:115
+msgid "管理员账号"
+msgstr "管理员账号"
+
+#: templates/admin/login.html:117
+msgid "admin"
+msgstr "admin"
+
+#: templates/admin/login.html:122
+msgid "密码"
+msgstr "密码"
+
+#: templates/admin/login.html:128
+msgid "登录"
+msgstr "登录"
+
+#: templates/admin/news.html:10
+msgid "管理和发布公司新闻"
+msgstr "管理和发布公司新闻"
+
+#: templates/admin/news.html:20
+msgid "新闻列表"
+msgstr "新闻列表"
+
+#: templates/admin/news.html:26
+msgid "标题"
+msgstr "标题"
+
+#: templates/admin/news.html:27
+msgid "发布时间"
+msgstr "发布时间"
+
+#: templates/admin/news.html:28 templates/admin/products.html:29
+msgid "操作"
+msgstr "操作"
+
+#: templates/admin/news.html:38 templates/admin/products.html:40
+msgid "编辑"
+msgstr "编辑"
+
+#: templates/admin/news.html:42 templates/admin/products.html:44
+msgid "删除"
+msgstr "删除"
+
+#: templates/admin/news.html:52
+msgid "暂无新闻"
+msgstr "暂无新闻"
+
+#: templates/admin/news_form.html:3 templates/admin/news_form.html:9
+msgid "编辑新闻"
+msgstr "编辑新闻"
+
+#: templates/admin/news_form.html:10
+msgid "修改现有新闻内容"
+msgstr "修改现有新闻内容"
+
+#: templates/admin/news_form.html:10
+msgid "创建并发布新的新闻"
+msgstr "创建并发布新的新闻"
+
+#: templates/admin/news_form.html:20
+msgid "新闻编辑"
+msgstr "新闻编辑"
+
+#: templates/admin/news_form.html:20
+msgid "新闻发布"
+msgstr "新闻发布"
+
+#: templates/admin/news_form.html:25
+msgid "新闻标题"
+msgstr "新闻标题"
+
+#: templates/admin/news_form.html:32
+msgid "封面图片 URL"
+msgstr "封面图片 URL"
+
+#: templates/admin/news_form.html:34 templates/admin/product_form.html:40
+msgid "https://example.com/image.jpg"
+msgstr "https://example.com/image.jpg"
+
+#: templates/admin/news_form.html:40
+msgid "内容"
+msgstr "内容"
+
+#: templates/admin/news_form.html:49 templates/admin/product_form.html:54
+msgid "保存"
+msgstr "保存"
+
+#: templates/admin/product_form.html:3 templates/admin/product_form.html:9
+msgid "编辑产品"
+msgstr "编辑产品"
+
+#: templates/admin/product_form.html:10
+msgid "修改现有产品信息"
+msgstr "修改现有产品信息"
+
+#: templates/admin/product_form.html:10
+msgid "创建并添加新的产品"
+msgstr "创建并添加新的产品"
+
+#: templates/admin/product_form.html:20
+msgid "产品编辑"
+msgstr "产品编辑"
+
+#: templates/admin/product_form.html:20
+msgid "产品添加"
+msgstr "产品添加"
+
+#: templates/admin/product_form.html:25
+msgid "产品名称"
+msgstr "产品名称"
+
+#: templates/admin/product_form.html:32
+msgid "价格/参数"
+msgstr "价格/参数"
+
+#: templates/admin/product_form.html:39
+msgid "图片 URL"
+msgstr "图片 URL"
+
+#: templates/admin/product_form.html:46
+msgid "产品描述"
+msgstr "产品描述"
+
+#: templates/admin/products.html:10
+msgid "管理所有产品信息，包括添加、编辑和删除操作"
+msgstr "管理所有产品信息，包括添加、编辑和删除操作"
+
+#: templates/admin/products.html:14
+msgid "添加新产品"
+msgstr "添加新产品"
+
+#: templates/admin/products.html:20
+msgid "产品列表"
+msgstr "产品列表"
+
+#: templates/admin/products.html:26
+msgid "名称"
+msgstr "名称"
+
+#: templates/admin/products.html:27
+msgid "价格"
+msgstr "价格"
+
+#: templates/admin/products.html:28
+msgid "创建时间"
+msgstr "创建时间"
+
+#~ msgid "确定要删除吗？"
+#~ msgstr "确定要删除吗？"
+
+#~ msgid "确定要删除这个产品吗？"
+#~ msgstr ""
+

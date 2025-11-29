@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('首页') }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ _('构建未来的数字体验') }}</h1>
+        <p>{{ _('我们致力于为您提供最优质的企业级解决方案，助力您的业务腾飞。通过创新技术和卓越服务，让您的企业在数字时代保持竞争力。') }}</p>
+        <div class="hero-cta">
+            <a href="{{ url_for('products') }}" class="btn btn-primary">{{ _('探索产品') }}</a>
+            <a href="{{ url_for('about') }}" class="btn btn-outline">{{ _('了解更多') }}</a>
+        </div>
+</section>
+
+<!-- Products Section -->
+<section class="section">
+    <h2 class="section-title">{{ _('最新产品') }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 cards-grid">
+            {% for product in products %}
+            <div class="card">
+                {% if product.image_url %}
+                <div class="card-img" style="background-image: url('{{ product.image_url }}'); background-size: cover; background-position: center;"></div>
+                {% else %}
+                <div class="card-img"></div>
+                {% endif %}
+                <div class="card-content">
+                    <h3 class="card-title">{{ product.title }}</h3>
+                    <p class="card-text">{{ product.description[:80] }}...</p>
+                    <div class="card-meta">
+                        <span class="price">{{ product.price }}</span>
+                        <a href="#" class="card-link">{{ _('查看详情') }} &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <p style="text-align: center; width: 100%; grid-column: 1 / -1;">{{ _('暂无产品展示') }}</p>
+            {% endfor %}
+        </div>
+</section>
+
+<!-- Features Section -->
+<section class="section">
+    <h2 class="section-title">{{ _('我们的优势') }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 cards-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3 class="feature-title">{{ _('创新技术') }}</h3>
+                <p class="feature-text">{{ _('我们采用最先进的技术栈，确保产品的高性能和可靠性。') }}</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3 class="feature-title">{{ _('卓越服务') }}</h3>
+                <p class="feature-text">{{ _('专业的客户服务团队，为您提供24/7全天候支持。') }}</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">{{ _('客户至上') }}</h3>
+                <p class="feature-text">{{ _('我们始终将客户需求放在首位，不断优化产品体验。') }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News Section -->
+<section class="section">
+    <h2 class="section-title">{{ _('行业动态') }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {% for news in news_list %}
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-meta">{{ news.published_date.strftime('%Y-%m-%d') }}</div>
+                    <h3 class="card-title">{{ news.title }}</h3>
+                    <p class="card-text">{{ news.content[:100] }}...</p>
+                    <a href="{{ url_for('news_detail', news_id=news.id) }}" class="card-link">{{ _('阅读更多') }} &rarr;</a>
+                </div>
+            </div>
+            {% else %}
+            <p style="text-align: center; width: 100%; grid-column: 1 / -1;">{{ _('暂无新闻动态') }}</p>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-8">
+            <a href="{{ url_for('news') }}" class="btn btn-outline">{{ _('查看全部新闻') }}</a>
+        </div>
+</section>
+{% endblock %}

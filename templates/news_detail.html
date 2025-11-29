@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}{{ news.title }}{% endblock %}
+
+{% block content %}
+<!-- News Detail Section -->
+<section class="section">
+    <div class="container">
+        <article class="article-detail">
+            <header class="article-header">
+                <h1 class="article-title">{{ news.title }}</h1>
+                <div class="article-meta">
+                    <span class="article-date">{{ _('发布于') }} {{ news.published_date.strftime('%Y-%m-%d') }}</span>
+                </div>
+            </header>
+
+            {% if news.image_url %}
+            <div class="article-image">
+                <img src="{{ news.image_url }}" alt="{{ news.title }}">
+            </div>
+            {% endif %}
+
+            <div class="article-body">
+                {{ news.content }}
+            </div>
+
+            <div class="article-actions">
+                <a href="{{ url_for('news') }}" class="btn btn-outline">{{ _('返回列表') }}</a>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

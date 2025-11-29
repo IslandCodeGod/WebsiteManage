@@ -1,0 +1,63 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}{{ _('产品管理') }}{% endblock %}
+
+{% block content %}
+<div class="dashboard-content">
+    <div class="flex justify-between items-center mb-8">
+        <div>
+            <h1 class="text-2xl font-bold">{{ _('产品管理') }}</h1>
+            <p class="text-muted">{{ _('管理所有产品信息，包括添加、编辑和删除操作') }}</p>
+        </div>
+        <a href="{{ url_for('new_product') }}" class="btn btn-primary">
+            <i class="fas fa-plus mr-2"></i>
+            {{ _('添加新产品') }}
+        </a>
+    </div>
+
+    <div class="table-container">
+        <div class="table-header">
+            <h2 class="table-title">{{ _('产品列表') }}</h2>
+        </div>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>{{ _('名称') }}</th>
+                        <th>{{ _('价格') }}</th>
+                        <th>{{ _('创建时间') }}</th>
+                        <th>{{ _('操作') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td>{{ product.title }}</td>
+                        <td class="font-semibold">¥{{ product.price }}</td>
+                        <td>{{ product.created_at.strftime('%Y-%m-%d') }}</td>
+                        <td>
+                            <div class="flex gap-2">
+                                <a href="{{ url_for('edit_product', id=product.id) }}" class="action-btn edit" title="{{ _('编辑') }}">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <form action="{{ url_for('delete_product', id=product.id) }}" method="post" style="display: inline;">
+                                    <button type="submit" class="action-btn delete" onclick="return confirm('是否删除这个产品？')" title="{{ _('删除') }}">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="4" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                            {{ _('暂无产品数据') }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

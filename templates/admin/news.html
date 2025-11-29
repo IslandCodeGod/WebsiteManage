@@ -1,0 +1,61 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}{{ _('新闻管理') }}{% endblock %}
+
+{% block content %}
+<div class="dashboard-content">
+    <div class="flex justify-between items-center mb-8">
+        <div>
+            <h1 class="text-2xl font-bold">{{ _('新闻管理') }}</h1>
+            <p class="text-muted">{{ _('管理和发布公司新闻') }}</p>
+        </div>
+        <a href="{{ url_for('new_news') }}" class="btn btn-primary">
+            <i class="fas fa-plus mr-2"></i>
+            {{ _('发布新闻') }}
+        </a>
+    </div>
+
+    <div class="table-container">
+        <div class="table-header">
+            <h2 class="table-title">{{ _('新闻列表') }}</h2>
+        </div>
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>{{ _('标题') }}</th>
+                        <th>{{ _('发布时间') }}</th>
+                        <th>{{ _('操作') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for news in news_list %}
+                    <tr>
+                        <td>{{ news.title }}</td>
+                        <td>{{ news.published_date.strftime('%Y-%m-%d') }}</td>
+                        <td>
+                            <div class="flex gap-2">
+                                <a href="{{ url_for('edit_news', id=news.id) }}" class="action-btn edit" title="{{ _('编辑') }}">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <form action="{{ url_for('delete_news', id=news.id) }}" method="POST" style="display: inline;">
+                                    <button type="submit" class="action-btn delete" onclick="return confirm('是否删除？')" title="{{ _('删除') }}">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="3" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                            {{ _('暂无新闻') }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,4 +1,4 @@
-English|[German](README_de.md)|[中文](README_zh.md)|[日本語](README_ja.md)|[Русский](README_ru.md)|[한국어](README_ko.md)|[Español](README_es.md)|[Français](README_fr.md)|[Italiano](README_it.md)|[Português](README_pt.md)|[Nederlands](README_nl.md)|[Polski](README_pl.md)|[العربية](README_ar.md)|[हिन्दी](README_hi.md)|[ไทย](README_th.md)|[Svenska](README_sv.md)|[Türkçe](README_tr.md)|[Tiếng Việt](README_vi.md)
+English|[German](README/README_de.md)|[中文](README/README_zh.md)|[日本語](README/README_ja.md)|[Русский](README/README_ru.md)|[한국어](README/README_ko.md)|[Español](README/README_es.md)|[Français](README/README_fr.md)|[Italiano](README/README_it.md)|[Português](README/README_pt.md)|[Nederlands](README/README_nl.md)|[Polski](README/README_pl.md)|[العربية](README/README_ar.md)|[हिन्दी](README/README_hi.md)|[ไทย](README/README_th.md)|[Svenska](README/README_sv.md)|[Türkçe](README/README_tr.md)|[Tiếng Việt](README/README_vi.md)
 
 # Flask Web Application - Enterprise website management system (encrypted version)
 
@@ -11,10 +11,10 @@ This is an **encrypted version** of an enterprise website management system deve
 The following is a screenshot of the main interface of the application:
 
 ### Home
-![首页](screenshots/index.png)
+![首页](README/screenshots/index.png)
 
 ### Management background
-![管理后台](screenshots/admin_dashboard.png)
+![管理后台](README/screenshots/admin_dashboard.png)
 
 ## Release Notes
 
@@ -211,3 +211,4 @@ If you have any questions, suggestions, or need full version/customized function
 ---
 
 Thanks for using this project!
+

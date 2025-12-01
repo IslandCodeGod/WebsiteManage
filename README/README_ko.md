@@ -1,3 +1,5 @@
+[English](README_en.md)|[German](README_de.md)|[中文](README_zh.md)|[日本語](README_ja.md)|[Русский](README_ru.md)|한국어|[Español](README_es.md)|[Français](README_fr.md)|[Italiano](README_it.md)|[Português](README_pt.md)|[Nederlands](README_nl.md)|[Polski](README_pl.md)|[العربية](README_ar.md)|[हिन्दी](README_hi.md)|[ไทย](README_th.md)|[Svenska](README_sv.md)|[Türkçe](README_tr.md)|[Tiếng Việt](README_vi.md)
+
 # Flask 웹 애플리케이션 - 기업 웹사이트 관리 시스템(암호화된 버전)
 
 ## 프로젝트 소개

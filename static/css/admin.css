@@ -774,6 +774,30 @@ header {
     }
 }
 
+/* Product Image Styles */
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.product-image-placeholder {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
 /* Custom Scrollbar */
 .sidebar::-webkit-scrollbar {
     width: 6px;

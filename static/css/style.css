@@ -211,6 +211,8 @@ nav {
     text-align: center;
     position: relative;
     overflow: hidden;
+    max-width: 1208px;
+    margin: 0 auto;
 }
 
 .hero-bg {
@@ -243,7 +245,7 @@ nav {
 /* Sections */
 .section {
     padding: 5rem 2rem;
-    max-width: 1400px;
+    max-width: 1208px;
     margin: 0 auto;
 }
 

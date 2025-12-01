@@ -20,9 +20,15 @@
             <h2 class="table-title">{{ _('产品列表') }}</h2>
         </div>
         <div class="table-wrapper">
+            <!-- 图片预览模态框 -->
+            <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 1000; justify-content: center; align-items: center;">
+                <img id="modalImage" style="max-width: 90%; max-height: 90%; cursor: pointer;">
+            </div>
+            
             <table class="data-table">
                 <thead>
                     <tr>
+                        <th>{{ '照片' if current_locale == 'zh' else 'Image' }}</th>
                         <th>{{ _('名称') }}</th>
                         <th>{{ _('价格') }}</th>
                         <th>{{ _('创建时间') }}</th>
@@ -32,6 +38,13 @@
                 <tbody>
                     {% for product in products %}
                     <tr>
+                        <td>
+                    {% if product.image_url %}
+                        <img src="{{ product.image_url }}" alt="{{ product.title }}" class="product-image" onclick="openImageModal('{{ product.image_url }}')" style="cursor: pointer;">
+                    {% else %}
+                        <div class="product-image-placeholder">{{ _('无图片') }}</div>
+                    {% endif %}
+                </td>
                         <td>{{ product.title }}</td>
                         <td class="font-semibold">¥{{ product.price }}</td>
                         <td>{{ product.created_at.strftime('%Y-%m-%d') }}</td>
@@ -60,4 +73,19 @@
         </div>
     </div>
 </div>
+    
+    <script>
+        // 图片预览功能
+        function openImageModal(imageUrl) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageUrl;
+            modal.style.display = 'flex';
+        }
+        
+        // 点击模态框关闭
+        document.getElementById('imageModal').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
 {% endblock %}

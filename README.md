@@ -201,14 +201,8 @@ When the application starts, log information will be output on the console. If y
 
 [MIT License](LICENSE)
 
-## Contact information
-
-If you have any questions, suggestions, or need full version/customized function development, please contact via the following methods:
-
-- **Email**: austinlive666@gmail.com (recommended)
-- **Discord**:[https://discord.gg/7AN9PuGn](https://discord.gg/7AN9PuGn)
-
 ---
 
 Thanks for using this project!
+
 
